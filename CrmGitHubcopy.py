@@ -30,16 +30,6 @@ cur.execute("""CREATE TABLE if not exists customers (
     )
     """)
 
-#temp data
-data = [
-    ["Jamie", "Pacheco", "1","ll Cheswold Blvd", "Newark", "DE", "19713"],
-    ["Claudia", "Chance", "2","ll Cheswold Blvd", "Newark", "DE", "19713"],
-    ["Robin", "Chance", "3","ll Cheswold Blvd", "Newark", "DE", "19713"],
-    ["Dylan", "Chance", "4","ll Cheswold Blvd", "Newark", "DE", "19713"],
-    ["Casandra", "Kirchner", "5","ll Cheswold Blvd", "Newark", "DE", "19713"]
-
-    ]
-
 #Add dummy data
 for record in data:
     con.execute("INSERT INTO customers VALUES (:first_name, :last_name, :ID, :Address, :city, :state, :zipcode)",
